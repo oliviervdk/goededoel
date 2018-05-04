@@ -36,5 +36,10 @@ public class GoedeDoelTest {
 	public void goedeDoelenMetVerschillendeNaamMoetenVolgensEqualsVerschillendZijn() {
 		assertNotEquals(new GoedeDoel("Unicef"), doel);
 	}
+	
+	@Test
+	public void goedeDoelenMetDezelfdeNaamHebbenDezelfdeHashcode() {
+		assertEquals(new GoedeDoel("CLINICLOWNS").hashCode(), doel.hashCode());
+	}
 
 }
